@@ -5,10 +5,12 @@ var router  =  express.Router();
 //For get routers files call
 var prescriptionD = require('./getPrescriptionDetails.js');
 var diganosisD = require('./getDiagnosisD.js')
+var medicationD = require('./getMedicationDetails.js')
 
 /*Access get routes from here*/
 router.get('/api/prescriptionD', prescriptionD.getPrescription);
 router.get('/api/diagnosisD/:patientId',diganosisD.getDiganosis);
+router.get('/api/medicationD/:patientId',medicationD.getMedication);
 
 
 
